@@ -1,15 +1,8 @@
 import { Category } from "../model/Category";
+import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository";
 
-
-// DTO => Data Transfer Object
-// Podemos usar para transferir dados da nossa rota para o nosso repositório
-
-interface ICreateCategoryDTO {
-  name: string;
-  description: string;
-}
-
-class CategoriesRepository {
+// "Banco" em memória
+class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
   constructor() {
@@ -17,7 +10,7 @@ class CategoriesRepository {
   }
 
   // Método para cadastrar categoria
-  create( {name, description }: ICreateCategoryDTO): void {
+  create({name, description }: ICreateCategoryDTO): void {
     const category = new Category();
 
     Object.assign(category, {
