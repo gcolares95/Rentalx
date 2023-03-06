@@ -6,12 +6,6 @@ interface IRequest {
   description: string;
 }
 
-/**
- * [X] Definir um tipo de retorno
- * [x] Alterar o retorno de erro
- * [X] Acessar o repositório
- */
-
 class CreateCategoryService {
 
   constructor(private categoriesRepository: ICategoriesRepository) {}
