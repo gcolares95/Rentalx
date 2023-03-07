@@ -3,7 +3,7 @@ import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesReposito
 
 // "Banco" em memória
 class CategoriesRepository implements ICategoriesRepository {
-  private categories: Category[];
+  private categories: Category[];  // criando tabela "fake" de Specification
 
   constructor() {
     this.categories = [];

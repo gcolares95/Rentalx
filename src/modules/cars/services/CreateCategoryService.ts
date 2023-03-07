@@ -1,4 +1,7 @@
 // Service responsável por criar uma Categoria
+
+// Dentro do constructor recebemos a interface que será usada
+
 import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 interface IRequest {
